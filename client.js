@@ -10,7 +10,11 @@ const connect = function () {
     console.log("Successfully connected to game server");
     conn.write('Name: KK');
      });
-    
+     conn.on('connect',function(){
+      conn.write('Say: Hello!!');
+       });
+       
+     
   conn.on('data', (data) => {
     console.log('Server says: ', data);
     
@@ -19,7 +23,7 @@ const connect = function () {
     // conn.write('Move: up');
     // });
   // interpret incoming data as text
-
+  
   return conn;
 };
 

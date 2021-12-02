@@ -1,7 +1,7 @@
 let connection;
 const {connect} = require("./client");
 const handleUserInput = function (key) {
-  console.log('csdc', key);
+  // console.log('csdc', key);
   if (key === '\u0003') {
     process.exit();
   }
